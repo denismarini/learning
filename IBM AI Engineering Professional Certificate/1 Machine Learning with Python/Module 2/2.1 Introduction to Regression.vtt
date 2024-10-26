@@ -1,0 +1,210 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.450
+Hello and welcome! In this video we'll be
+giving a brief introduction to regression. So
+
+2
+00:00:06.450 --> 00:00:12.690
+let's get started. Look at this data set. It's
+related to co2 emissions from different cars.
+
+3
+00:00:12.690 --> 00:00:19.950
+It includes engine size, number of cylinders,
+fuel consumption, and co2 emission from various
+
+4
+00:00:19.950 --> 00:00:27.570
+automobile models. The question is: given this
+data set can we predict the co2 emission of a
+
+5
+00:00:27.570 --> 00:00:35.160
+car using other fields such as engine size or
+cylinders? Let's assume we have some historical
+
+6
+00:00:35.160 --> 00:00:41.340
+data from different cars and assume that a car
+such as in row 9 has not been manufactured yet,
+
+7
+00:00:41.340 --> 00:00:48.660
+but we're interested in estimating its approximate
+co2 emission after production. Is it possible?
+
+8
+00:00:48.660 --> 00:00:56.070
+We can use regression methods to predict a
+continuous value such as co2 emission using
+
+9
+00:00:56.070 --> 00:01:03.210
+some other variables. Indeed regression is the
+process of predicting a continuous value. In
+
+10
+00:01:03.210 --> 00:01:10.290
+regression there are two types of variables: a
+dependent variable and one or more independent
+
+11
+00:01:10.290 --> 00:01:18.300
+variables. The dependent variable can be seen as
+the state, target, or final goal we study and try
+
+12
+00:01:18.300 --> 00:01:25.320
+to predict. And the independent variables, also
+known as explanatory variables, can be seen as the
+
+13
+00:01:25.320 --> 00:01:32.670
+causes of those states. The independent variables
+are shown conventionally by X and the dependent
+
+14
+00:01:32.670 --> 00:01:40.860
+variable is notated by Y. A regression model
+relates Y or the dependent variable to a function
+
+15
+00:01:40.860 --> 00:01:48.420
+of X i.e. the independent variables. The key point
+in the regression is that our dependent value
+
+16
+00:01:48.420 --> 00:01:55.800
+should be continuous and cannot be a discrete
+value. However, the independent variable, or
+
+17
+00:01:55.800 --> 00:02:05.040
+variables, can be measured on either a categorical
+or continuous measurement scale. So, what we want
+
+18
+00:02:05.040 --> 00:02:12.000
+to do here is to use the historical data of some
+cars using one or more of their features and from
+
+19
+00:02:12.000 --> 00:02:20.250
+that data make a model. We use regression to build
+such a regression estimation model; then the model
+
+20
+00:02:20.250 --> 00:02:27.930
+is used to predict the expected co2 emission
+for a new or unknown car. Basically there are
+
+21
+00:02:27.930 --> 00:02:35.070
+two types of regression models simple regression
+and multiple regression. Simple regression is when
+
+22
+00:02:35.070 --> 00:02:41.430
+one independent variable is used to estimate a
+dependent variable. It can be either linear or
+
+23
+00:02:41.430 --> 00:02:49.770
+non-linear. For example, predicting co2 emission
+using the variable of engine size. Linearity of
+
+24
+00:02:49.770 --> 00:02:56.880
+regression is based on the nature of relationship
+between independent and dependent variables. When
+
+25
+00:02:56.880 --> 00:03:03.510
+more than one independent variable is present the
+process is called multiple linear regression. For
+
+26
+00:03:03.510 --> 00:03:10.320
+example, predicting co2 emission using engine
+size and the number of cylinders in any given
+
+27
+00:03:10.320 --> 00:03:17.430
+car. Again, depending on the relation between
+dependent and independent variables it can be
+
+28
+00:03:17.430 --> 00:03:24.270
+either linear or non-linear regression. Let's
+examine some sample applications of regression.
+
+29
+00:03:24.270 --> 00:03:31.560
+Essentially we use regression when we want
+to estimate a continuous value. For instance,
+
+30
+00:03:31.560 --> 00:03:38.340
+one of the applications of regression analysis
+could be in the area of sales forecasting. You
+
+31
+00:03:38.340 --> 00:03:44.160
+can try to predict a sales person's total yearly
+sales from independent variables such as age,
+
+32
+00:03:44.160 --> 00:03:50.910
+education, and years of experience. It can also
+be used in the field of psychology, for example,
+
+33
+00:03:50.910 --> 00:03:58.290
+to determine individual satisfaction, based on
+demographic and psychological factors. We can
+
+34
+00:03:58.290 --> 00:04:04.260
+use regression analysis to predict the price of
+a house in an area, based on its size number of
+
+35
+00:04:04.260 --> 00:04:11.790
+bedrooms, and so on. We can even use it to predict
+employment income for independent variables such
+
+36
+00:04:11.790 --> 00:04:20.790
+as hours of work, education, occupation, sex,
+age, years of experience, and so on. Indeed,
+
+37
+00:04:20.790 --> 00:04:27.120
+you can find many examples of the usefulness of
+regression analysis in these and many other fields
+
+38
+00:04:27.120 --> 00:04:34.920
+or domains, such as finance, healthcare, retail,
+and more. We have many regression algorithms,
+
+39
+00:04:34.920 --> 00:04:40.500
+each of them has its own importance and a
+specific condition to which their application
+
+40
+00:04:40.500 --> 00:04:46.200
+is best suited. And while we've covered just a
+few of them in this course, it gives you enough
+
+41
+00:04:46.200 --> 00:04:51.480
+base knowledge for you to explore different
+regression techniques. Thanks for watching.
+
+42
+00:04:51.480 --> 00:04:56.000
+(Music)

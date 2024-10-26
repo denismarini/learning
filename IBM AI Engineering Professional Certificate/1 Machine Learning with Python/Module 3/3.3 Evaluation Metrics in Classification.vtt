@@ -1,0 +1,676 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.340
+Hello and welcome.
+In this video,
+
+2
+00:00:03.340 --> 00:00:05.640
+we'll be covering
+evaluation metrics for
+
+3
+00:00:05.640 --> 00:00:08.620
+classifiers. Let's get started.
+
+4
+00:00:08.620 --> 00:00:12.980
+Evaluation metrics explain
+the performance of a model.
+
+5
+00:00:12.980 --> 00:00:16.160
+Let's talk more about the
+model evaluation metrics
+
+6
+00:00:16.160 --> 00:00:18.200
+that are used for
+classification.
+
+7
+00:00:18.200 --> 00:00:21.600
+Imagine that we have
+an historical dataset
+
+8
+00:00:21.600 --> 00:00:23.400
+which shows the customer churn
+
+9
+00:00:23.400 --> 00:00:25.440
+for a telecommunication company.
+
+10
+00:00:25.440 --> 00:00:27.090
+We have trained the model,
+
+11
+00:00:27.090 --> 00:00:28.680
+and now we want to calculate
+
+12
+00:00:28.680 --> 00:00:31.140
+its accuracy using the test set.
+
+13
+00:00:31.140 --> 00:00:33.895
+We pass the test
+set to our model,
+
+14
+00:00:33.895 --> 00:00:36.480
+and we find the
+predicted labels.
+
+15
+00:00:36.480 --> 00:00:40.380
+Now the question is, how
+accurate is this model?
+
+16
+00:00:40.380 --> 00:00:43.340
+Basically, we compare
+the actual values
+
+17
+00:00:43.340 --> 00:00:44.680
+in the test set with
+
+18
+00:00:44.680 --> 00:00:46.840
+the values predicted
+by the model
+
+19
+00:00:46.840 --> 00:00:49.660
+to calculate the
+accuracy of the model.
+
+20
+00:00:49.660 --> 00:00:51.660
+Evaluation metrics
+
+21
+00:00:51.660 --> 00:00:54.000
+provide a key role in
+the development of
+
+22
+00:00:54.000 --> 00:00:56.180
+a model as they provide insight
+
+23
+00:00:56.180 --> 00:00:58.920
+to areas that might
+require improvement.
+
+24
+00:00:58.920 --> 00:01:01.960
+There are different model
+evaluation metrics,
+
+25
+00:01:01.960 --> 00:01:04.550
+but we just talk about
+three of them here,
+
+26
+00:01:04.550 --> 00:01:07.220
+specifically, Jaccard index,
+
+27
+00:01:07.220 --> 00:01:10.220
+F1 score, and log loss.
+
+28
+00:01:10.220 --> 00:01:12.200
+Let's first look at one of
+
+29
+00:01:12.200 --> 00:01:14.360
+the simplest accuracy
+measurements,
+
+30
+00:01:14.360 --> 00:01:15.740
+the Jaccard index,
+
+31
+00:01:15.740 --> 00:01:19.460
+also known as the Jaccard
+similarity coefficient.
+
+32
+00:01:19.460 --> 00:01:23.745
+Let's say y shows the true
+labels of the churn dataset,
+
+33
+00:01:23.745 --> 00:01:28.320
+and y-hat shows the predicted
+values by our classifier.
+
+34
+00:01:28.320 --> 00:01:31.480
+Then we can define
+Jaccard as the size of
+
+35
+00:01:31.480 --> 00:01:34.000
+the intersection
+divided by the size of
+
+36
+00:01:34.000 --> 00:01:36.980
+the union of two label sets.
+
+37
+00:01:36.980 --> 00:01:39.960
+For example, for a
+test set of size
+
+38
+00:01:39.960 --> 00:01:44.380
+10 with eight correct predictions
+or eight intersections,
+
+39
+00:01:44.380 --> 00:01:49.300
+the accuracy by the Jaccard
+index would be 0.66.
+
+40
+00:01:49.300 --> 00:01:52.020
+If the entire set of
+predicted labels for
+
+41
+00:01:52.020 --> 00:01:55.700
+a sample strictly matches
+with the true set of labels,
+
+42
+00:01:55.700 --> 00:01:59.065
+then the subset accuracy is 1.0,
+
+43
+00:01:59.065 --> 00:02:02.265
+otherwise, it is 0.0.
+
+44
+00:02:02.265 --> 00:02:04.690
+Another way of looking
+at accuracy of
+
+45
+00:02:04.690 --> 00:02:08.570
+classifiers is to look
+at a confusion matrix.
+
+46
+00:02:08.570 --> 00:02:11.130
+For example, let's
+assume that our
+
+47
+00:02:11.130 --> 00:02:13.770
+test set has only 40 rows.
+
+48
+00:02:13.770 --> 00:02:17.710
+This matrix shows the corrected
+and wrong predictions
+
+49
+00:02:17.710 --> 00:02:20.600
+in comparison with
+the actual labels.
+
+50
+00:02:20.600 --> 00:02:23.510
+Each confusion matrix row shows
+
+51
+00:02:23.510 --> 00:02:26.450
+the actual true labels
+in the test set,
+
+52
+00:02:26.450 --> 00:02:30.175
+and the columns show the
+predicted labels by classifier.
+
+53
+00:02:30.175 --> 00:02:32.380
+Let's look at the first row.
+
+54
+00:02:32.380 --> 00:02:34.760
+The first row is for customers
+
+55
+00:02:34.760 --> 00:02:38.420
+whose actual churn value
+in the test set is one.
+
+56
+00:02:38.420 --> 00:02:40.140
+As you can calculate,
+
+57
+00:02:40.140 --> 00:02:41.720
+out of 40 customers,
+
+58
+00:02:41.720 --> 00:02:45.050
+the churn value of
+15 of them is one,
+
+59
+00:02:45.050 --> 00:02:47.040
+and out of these 15,
+
+60
+00:02:47.040 --> 00:02:51.120
+the classifier correctly
+predicted six of them as one,
+
+61
+00:02:51.120 --> 00:02:53.085
+and nine of them as zero.
+
+62
+00:02:53.085 --> 00:02:55.690
+This means that
+for six customers,
+
+63
+00:02:55.690 --> 00:02:59.070
+the actual churn value
+was one in the test set,
+
+64
+00:02:59.070 --> 00:03:03.050
+and the classifier also correctly
+predicted those as one.
+
+65
+00:03:03.050 --> 00:03:05.550
+However, while the actual label
+
+66
+00:03:05.550 --> 00:03:07.430
+of nine customers was one,
+
+67
+00:03:07.430 --> 00:03:10.550
+the classifier predicted
+those as zero,
+
+68
+00:03:10.550 --> 00:03:12.450
+which is not very good.
+
+69
+00:03:12.450 --> 00:03:14.290
+We can consider this as
+
+70
+00:03:14.290 --> 00:03:16.950
+an error of the model
+for the first row.
+
+71
+00:03:16.950 --> 00:03:20.600
+What about the customers
+with a churn value 0?
+
+72
+00:03:20.600 --> 00:03:22.595
+Let's look at the second row.
+
+73
+00:03:22.595 --> 00:03:24.070
+It looks like there were
+
+74
+00:03:24.070 --> 00:03:27.630
+25 customers whose
+churn value was zero.
+
+75
+00:03:27.630 --> 00:03:31.190
+The classifier correctly
+predicted 24 of them as
+
+76
+00:03:31.190 --> 00:03:34.685
+zero and one of them
+wrongly predicted as one,
+
+77
+00:03:34.685 --> 00:03:37.250
+so it has done a good job in
+
+78
+00:03:37.250 --> 00:03:40.635
+predicting the customers
+with a churn value of zero.
+
+79
+00:03:40.635 --> 00:03:44.480
+A good thing about the confusion
+matrix is that it shows
+
+80
+00:03:44.480 --> 00:03:46.400
+the model's ability to correctly
+
+81
+00:03:46.400 --> 00:03:49.000
+predict or separate the classes.
+
+82
+00:03:49.000 --> 00:03:50.600
+In the specific case of
+
+83
+00:03:50.600 --> 00:03:53.720
+a binary classifier
+such as this example,
+
+84
+00:03:53.720 --> 00:03:55.640
+we can interpret these numbers
+
+85
+00:03:55.640 --> 00:03:57.920
+as the count of true positives,
+
+86
+00:03:57.920 --> 00:04:02.680
+false negatives, true
+negatives, and false positives.
+
+87
+00:04:02.680 --> 00:04:05.060
+Based on the count
+of each section,
+
+88
+00:04:05.060 --> 00:04:09.595
+we can calculate the precision
+and recall of each label.
+
+89
+00:04:09.595 --> 00:04:11.530
+Precision is a measure of
+
+90
+00:04:11.530 --> 00:04:13.410
+the accuracy provided that
+
+91
+00:04:13.410 --> 00:04:15.630
+a class label has
+been predicted.
+
+92
+00:04:15.630 --> 00:04:19.190
+It is defined by
+precision equals
+
+93
+00:04:19.190 --> 00:04:21.270
+true positive divided by
+
+94
+00:04:21.270 --> 00:04:24.110
+true positive plus
+false positive.
+
+95
+00:04:24.110 --> 00:04:27.450
+Recall is the true
+positive rate.
+
+96
+00:04:27.450 --> 00:04:31.250
+It is defined as
+recall equals true
+
+97
+00:04:31.250 --> 00:04:36.275
+positive divided by true
+positive plus false negative.
+
+98
+00:04:36.275 --> 00:04:41.310
+We can calculate the precision
+and recall of each class.
+
+99
+00:04:41.310 --> 00:04:45.190
+Now we're in the position to
+calculate the F1 scores for
+
+100
+00:04:45.190 --> 00:04:46.870
+each label based on
+
+101
+00:04:46.870 --> 00:04:50.020
+the precision and
+recall of that label.
+
+102
+00:04:50.020 --> 00:04:51.870
+The F1 score is
+
+103
+00:04:51.870 --> 00:04:55.530
+the harmonic average of
+the precision and recall,
+
+104
+00:04:55.530 --> 00:04:59.590
+where an F1 score reaches
+its best value at one,
+
+105
+00:04:59.590 --> 00:05:02.605
+which represents perfect
+precision and recall,
+
+106
+00:05:02.605 --> 00:05:04.790
+and its worst at zero.
+
+107
+00:05:04.790 --> 00:05:07.990
+It is a good way to show
+that a classifier has
+
+108
+00:05:07.990 --> 00:05:11.670
+a good value for both
+recall and precision.
+
+109
+00:05:11.670 --> 00:05:15.915
+It is defined using
+the F1 score equation.
+
+110
+00:05:15.915 --> 00:05:19.895
+For example, the F1
+score for Class 0,
+
+111
+00:05:19.895 --> 00:05:22.250
+ie churn equals zero,
+
+112
+00:05:22.250 --> 00:05:26.955
+is 0.83, and the F1
+score for Class 1,
+
+113
+00:05:26.955 --> 00:05:31.460
+ie churn equals one, is 0.55.
+
+114
+00:05:31.460 --> 00:05:34.890
+Finally, we can tell the
+average accuracy for
+
+115
+00:05:34.890 --> 00:05:37.190
+this classifier is the average
+
+116
+00:05:37.190 --> 00:05:39.710
+of the F1 score for both labels,
+
+117
+00:05:39.710 --> 00:05:42.990
+which is 0.69 in our case.
+
+118
+00:05:42.990 --> 00:05:46.950
+Please notice that both
+Jaccard and F1 score
+
+119
+00:05:46.950 --> 00:05:50.530
+can be used for multiclass
+classifiers as well,
+
+120
+00:05:50.530 --> 00:05:53.075
+which is out of scope
+for this course.
+
+121
+00:05:53.075 --> 00:05:55.180
+Now, let's look at another
+
+122
+00:05:55.180 --> 00:05:57.660
+accuracy metric for classifiers.
+
+123
+00:05:57.660 --> 00:06:00.600
+Sometimes the output
+of a classifier is
+
+124
+00:06:00.600 --> 00:06:04.140
+the probability of a class
+label instead of the label.
+
+125
+00:06:04.140 --> 00:06:06.980
+For example, in
+logistic regression,
+
+126
+00:06:06.980 --> 00:06:10.435
+the output can be the
+probability of customer churn,
+
+127
+00:06:10.435 --> 00:06:13.975
+ie yes, or equals to one.
+
+128
+00:06:13.975 --> 00:06:18.260
+This probability is a value
+between zero and one.
+
+129
+00:06:18.260 --> 00:06:21.930
+Logarithmic loss, also
+known as log loss,
+
+130
+00:06:21.930 --> 00:06:24.870
+measures the performance
+of a classifier where
+
+131
+00:06:24.870 --> 00:06:26.410
+the predicted output is
+
+132
+00:06:26.410 --> 00:06:29.650
+a probability value
+between zero and one.
+
+133
+00:06:29.650 --> 00:06:32.730
+For example, predicting
+a probability of
+
+134
+00:06:32.730 --> 00:06:37.340
+0.13 when the actual label
+is one would be bad,
+
+135
+00:06:37.340 --> 00:06:40.390
+and would result in
+a high log loss.
+
+136
+00:06:40.390 --> 00:06:42.670
+We can calculate
+the log loss for
+
+137
+00:06:42.670 --> 00:06:45.650
+each row using the
+log loss equation,
+
+138
+00:06:45.650 --> 00:06:47.130
+which measures how far
+
+139
+00:06:47.130 --> 00:06:50.010
+each prediction is
+from the actual label.
+
+140
+00:06:50.010 --> 00:06:52.810
+Then we calculate
+the average log loss
+
+141
+00:06:52.810 --> 00:06:55.330
+across all rows of the test set.
+
+142
+00:06:55.330 --> 00:06:58.150
+It is obvious that
+ideal classifiers
+
+143
+00:06:58.150 --> 00:07:01.250
+have progressively smaller
+values of log loss,
+
+144
+00:07:01.250 --> 00:07:03.470
+so the classifier with
+
+145
+00:07:03.470 --> 00:07:05.230
+the lower log loss has
+
+146
+00:07:05.230 --> 00:07:09.150
+better accuracy.
+Thanks for watching.

@@ -1,0 +1,277 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.449
+Hello everyone! And welcome to the deep
+
+2
+00:00:03.449 --> 00:00:05.430
+learning fundamentals with Keras course.
+
+3
+00:00:05.430 --> 00:00:07.710
+I am Alex Aklson, your course
+
+4
+00:00:07.710 --> 00:00:10.559
+instructor. In this introductory course, I
+
+5
+00:00:10.559 --> 00:00:13.349
+will try to teach you the basics of one
+
+6
+00:00:13.349 --> 00:00:15.269
+of the hottest topics in the field of
+
+7
+00:00:15.269 --> 00:00:18.930
+data science, which is deep learning. This
+
+8
+00:00:18.930 --> 00:00:20.490
+course will consist of four modules,
+
+9
+00:00:20.490 --> 00:00:22.890
+which you should be able to complete in
+
+10
+00:00:22.890 --> 00:00:26.849
+four weeks. In module 1, I will try to
+
+11
+00:00:26.849 --> 00:00:29.310
+motivate you about this field. I know
+
+12
+00:00:29.310 --> 00:00:31.500
+that the fact that you are here, you must
+
+13
+00:00:31.500 --> 00:00:33.630
+be already motivated to learn about deep
+
+14
+00:00:33.630 --> 00:00:35.910
+learning, but I will share with you some
+
+15
+00:00:35.910 --> 00:00:38.250
+very exciting applications of deep
+
+16
+00:00:38.250 --> 00:00:40.350
+learning that will hopefully motivate
+
+17
+00:00:40.350 --> 00:00:42.989
+you even more, and demonstrate to you
+
+18
+00:00:42.989 --> 00:00:44.940
+that there is almost no limit to what
+
+19
+00:00:44.940 --> 00:00:47.550
+can be done using deep learning. We will
+
+20
+00:00:47.550 --> 00:00:49.829
+also briefly cover neurons and neural
+
+21
+00:00:49.829 --> 00:00:51.780
+networks in the brain, so you can
+
+22
+00:00:51.780 --> 00:00:54.449
+appreciate how they inspire artificial
+
+23
+00:00:54.449 --> 00:00:56.969
+neural networks. Then, we will start
+
+24
+00:00:56.969 --> 00:00:59.010
+learning about the different topics
+
+25
+00:00:59.010 --> 00:01:00.719
+associated with artificial neural
+
+26
+00:01:00.719 --> 00:01:03.210
+networks, and in this module we will
+
+27
+00:01:03.210 --> 00:01:05.069
+focus on the process of forward
+
+28
+00:01:05.069 --> 00:01:10.530
+propagation. In module 2, we will continue
+
+29
+00:01:10.530 --> 00:01:12.060
+learning about artificial neural
+
+30
+00:01:12.060 --> 00:01:15.030
+networks, and focus on how an artificial
+
+31
+00:01:15.030 --> 00:01:18.659
+neural network learns, what is gradient
+
+32
+00:01:18.659 --> 00:01:21.360
+descent, and what are activation
+
+33
+00:01:21.360 --> 00:01:26.729
+functions. In module 3, we will learn
+
+34
+00:01:26.729 --> 00:01:28.590
+about some of the most popular deep
+
+35
+00:01:28.590 --> 00:01:31.799
+learning libraries, namely Keras, PyTorch,
+
+36
+00:01:31.799 --> 00:01:35.100
+and TensorFlow. And we will learn
+
+37
+00:01:35.100 --> 00:01:37.320
+how to use the Keras library to build
+
+38
+00:01:37.320 --> 00:01:39.049
+models for regression and classification
+
+39
+00:01:39.049 --> 00:01:44.250
+problems. In module 4, we will learn about
+
+40
+00:01:44.250 --> 00:01:46.860
+supervised and unsupervised deep neural
+
+41
+00:01:46.860 --> 00:01:49.020
+networks, namely convolutional neural
+
+42
+00:01:49.020 --> 00:01:52.040
+networks, recurrent neural networks. and
+
+43
+00:01:52.040 --> 00:01:55.170
+autoencoders. We will also learn how to
+
+44
+00:01:55.170 --> 00:01:57.420
+use the Keras library to build a
+
+45
+00:01:57.420 --> 00:01:59.120
+convolutional neural network.
+
+46
+00:02:02.840 --> 00:02:04.200
+Before I conclude this video,
+
+47
+00:02:04.200 --> 00:02:06.299
+I would like to make an important note.
+
+48
+00:02:06.299 --> 00:02:09.780
+In this course, I decided to focus on the
+
+49
+00:02:09.780 --> 00:02:12.280
+fundamentals of deep learning. Deep
+
+50
+00:02:12.280 --> 00:02:13.319
+learning is a vast
+
+51
+00:02:13.319 --> 00:02:15.299
+field now and is continuously evolving
+
+52
+00:02:15.299 --> 00:02:18.599
+at a fast pace. Therefore, the field can
+
+53
+00:02:18.599 --> 00:02:21.719
+be intimidating to many people, so I have
+
+54
+00:02:21.719 --> 00:02:23.730
+tailored this course to those who really
+
+55
+00:02:23.730 --> 00:02:25.709
+know nothing about deep learning or
+
+56
+00:02:25.709 --> 00:02:28.590
+neural networks. If you have worked a lot
+
+57
+00:02:28.590 --> 00:02:30.840
+with artificial neural networks and deep
+
+58
+00:02:30.840 --> 00:02:32.969
+learning models, then maybe this course
+
+59
+00:02:32.969 --> 00:02:35.040
+is not for you. You are more than welcome
+
+60
+00:02:35.040 --> 00:02:36.870
+to still take it as a refresher,
+
+61
+00:02:36.870 --> 00:02:39.629
+but maybe you will not learn a lot. While I
+
+62
+00:02:39.629 --> 00:02:41.519
+will introduce you to some advanced
+
+63
+00:02:41.519 --> 00:02:43.739
+topics in deep learning, but I am just
+
+64
+00:02:43.739 --> 00:02:45.480
+going to give you a simplified version
+
+65
+00:02:45.480 --> 00:02:46.940
+of them. I just wanted to
+
+66
+00:02:46.940 --> 00:02:49.580
+make this point clear in order to set
+
+67
+00:02:49.580 --> 00:02:52.180
+the expectations right at the beginning
+
+68
+00:02:52.180 --> 00:02:55.200
+of the course. And now with that, welcome
+
+69
+00:02:55.200 --> 00:02:57.320
+again and let's get started!
